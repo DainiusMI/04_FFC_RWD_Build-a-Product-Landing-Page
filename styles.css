@@ -1,0 +1,169 @@
+/* Your product landing page should have at least one media query */
+/* Your product landing page should utilize CSS flexbox at least once */
+
+:root {
+    --logo-purple: #7D005C;
+    --dark-red: #BE1623;
+    --bright-red:#E6342A;
+    --dark-yellow:#F29200;
+    --bright-yellow:#F9D133;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+html {
+    font-size: 20px;
+    font-family: sans-serif;
+}
+body {
+    padding: 0 2rem;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+main {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+section {
+    width: 80%;
+    margin: 1rem 0;
+}
+/* The navbar should always be at the top of the viewport */
+/* content area */
+#header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    border-bottom: 2px solid var(--logo-purple);
+    padding-top: 1rem;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 5rem 2rem;
+    justify-items: center;
+    align-items: center;
+}
+#header-img {
+    width: 5rem;
+    grid-column: 1 / 2;
+}
+.disclaimer {
+    font-size: .7rem;
+    width: 18ch;
+    text-align: center;
+    grid-column: 1 / 2;
+}
+#nav-bar {
+    grid-column: 2 / 6;
+    grid-row: 1 / 3;
+}
+.nav-link {
+    text-decoration: none;
+    font-weight: 600;
+    padding: 1rem;
+    border: 2px solid var(--logo-purple);
+    border-radius: 1rem;
+}
+a {
+    color: var(--logo-purple);
+}
+
+/* content area */
+
+h4 {
+    color: var(--logo-purple);
+    margin: 1rem 0;
+}
+.description {
+    font-size: .8rem;
+    text-align: justify;
+}
+
+#About_us {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 2rem auto;
+    column-gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+#About_us h4 {
+    grid-column: 1 / 3;
+}
+#About_us p {
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+}
+#video {
+    grid-row: 1 / 3;
+    height: 10rem;
+
+}
+form {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+form input {
+    width: 70%;
+    margin-left: 5%;
+    height: 1.5rem;
+    padding: 0 .5rem;
+}
+#submit {
+    padding: 0.8rem 2rem;
+    margin: 1rem 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--logo-purple);
+    background-color: white;
+    border: 2px solid var(--logo-purple);
+    border-radius: 1rem;
+}
+hr {
+    width: 100%;
+    border-bottom: 2px solid var(--logo-purple);
+}
+.socials {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+.fa-brands {
+    font-size: 3rem;
+    padding: 1rem;
+    border-radius: .5rem;
+}
+#submit:hover, .nav-link:hover, .fa-brands:hover  {
+    cursor: pointer;
+    color: white;
+    background: linear-gradient(70deg, var(--logo-purple) 0%, var(--logo-purple) 25%, var(--dark-red), var(--bright-red), var(--dark-yellow), var(--bright-yellow));
+}
+
+@media (max-width:900px) {
+    #About_us, #Join_us, #Contact_us {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    #video {
+        width: 70%;
+    }
+    form, form input {
+        margin: 0;
+        width: 100%;
+    }
+
+}

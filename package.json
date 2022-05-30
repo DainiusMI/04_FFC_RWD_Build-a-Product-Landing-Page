@@ -1,0 +1,16 @@
+{
+  "name": "04_ffc_rwd_build-a-product-landing-page",
+  "version": "1.0.0",
+  "description": "This project is a part of freeCodeCamp \"Responsive Web Design\" course cetrification project list. Due to lack of a better idea I simply chose to do this tribute about a car maker of my first own vehicle.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "live-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "DainiusMI",
+  "license": "ISC",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
